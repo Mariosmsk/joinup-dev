@@ -12,7 +12,6 @@ dependencies:
     - field.field.rdf_entity.collection.field_ar_content_creation
     - field.field.rdf_entity.collection.field_ar_description
     - field.field.rdf_entity.collection.field_ar_logo
-    - field.field.rdf_entity.collection.field_ar_moderation
     - field.field.rdf_entity.collection.field_ar_owner
     - field.field.rdf_entity.collection.field_ar_state
     - field.field.rdf_entity.collection.field_collection_content
@@ -79,7 +78,6 @@ third_party_settings:
         - field_spatial_coverage
         - field_ar_closed
         - field_ar_content_creation
-        - field_ar_moderation
         - field_newsletter
       parent_name: group_general
       weight: 7
@@ -181,13 +179,6 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
-    region: content
-  field_ar_moderation:
-    weight: 18
-    settings:
-      display_label: false
-    third_party_settings: {  }
-    type: boolean_checkbox
     region: content
   field_ar_owner:
     weight: 5

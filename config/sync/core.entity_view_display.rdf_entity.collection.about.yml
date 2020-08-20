@@ -38,7 +38,6 @@ third_party_settings:
       children:
         - field_ar_closed
         - field_ar_content_creation
-        - field_ar_moderation
       parent_name: ''
       weight: 4
       format_type: html_element

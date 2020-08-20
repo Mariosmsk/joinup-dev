@@ -134,7 +134,7 @@ function joinup_community_content_workflow_selector(EntityInterface $entity): ?s
   }
 
   if ($parent_entity->bundle() === 'solution') {
-    $moderation = JoinupGroupHelper::getModeration($parent_entity);
+    $moderation = $parent_entity->field_is_moderation->value;
     return $moderation == CommunityContentWorkflowAccessControlHandler::PRE_MODERATION ? 'node:pre_moderated' : 'node:post_moderated';
   }
   elseif ($parent_entity->bundle() === 'collection') {

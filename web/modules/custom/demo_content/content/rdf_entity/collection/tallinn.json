@@ -333,11 +333,6 @@
             "value": "only_members"
         }
     ],
-    "field_ar_moderation": [
-        {
-            "value": false
-        }
-    ],
     "field_ar_state": [
         {
             "value": "validated"

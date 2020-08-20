@@ -150,11 +150,6 @@
             "value": "only_members"
         }
     ],
-    "field_ar_moderation": [
-        {
-            "value": "0"
-        }
-    ],
     "field_ar_state": [
         {
             "value": "validated"

@@ -31,14 +31,6 @@ class JoinupGroupHelper {
   ];
 
   /**
-   * Content moderation field machine names per group bundle.
-   */
-  const GROUP_MODERATION_FIELDS = [
-    'collection' => 'field_ar_moderation',
-    'solution' => 'field_is_moderation',
-  ];
-
-  /**
    * Workflow state field machine names per group bundle.
    */
   const GROUP_STATE_FIELDS = [
@@ -120,21 +112,6 @@ class JoinupGroupHelper {
     // Asset releases use the ADMS-AP dictated name for the group field, while
     // all others use the default name.
     return $entity->bundle() === 'asset_release' ? 'field_isr_is_version_of' : OgGroupAudienceHelperInterface::DEFAULT_FIELD;
-  }
-
-  /**
-   * Returns the content moderation status for the given group.
-   *
-   * @param \Drupal\Core\Entity\EntityInterface $entity
-   *   The group for which to return the content moderation value.
-   *
-   * @return int
-   *   The content moderation status. Can be one of the following values:
-   *   - CommunityContentWorkflowAccessControlHandler::PRE_MODERATION
-   *   - CommunityContentWorkflowAccessControlHandler::POST_MODERATION
-   */
-  public static function getModeration(EntityInterface $entity): int {
-    return (int) $entity->{self::GROUP_MODERATION_FIELDS[$entity->bundle()]}->first()->value;
   }
 
   /**
